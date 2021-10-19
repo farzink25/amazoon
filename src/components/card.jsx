@@ -31,8 +31,9 @@ flex-wrap:wrap;
 padding:0;
 justify-content:space-around;
 width:100%;
-height:60%;
-@media (max-width:768px){
+height:50%;
+
+@media (max-width:500px){
     width:100%;
     float:none;
     display: flex;

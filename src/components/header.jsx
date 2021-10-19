@@ -10,7 +10,6 @@ import DropdownButton from 'react-bootstrap/DropdownButton'
 import {CardContext} from "./dataContext"
 import logo from "./images/logo.jpg"
 import usa from "./images/usa.png"
-import Container from 'react-bootstrap/Container'
 import {Col , Row} from 'react-bootstrap'
 
 const Header = () => {
