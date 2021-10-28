@@ -3,11 +3,12 @@ import styled from 'styled-components';
 
 function Menu() {
     const Side=styled.div`
-    padding:1% 0 0 2%;
+    padding:0 ;
     color: #333;
     height:100vh;
     width:380px;
-    display: block;
+    display: flex;
+    flex-direction:column;
     position:fixed;
     overflow-y:scroll;
     top:0;
@@ -16,6 +17,11 @@ function Menu() {
     transition:ease 3s;
     background:#fff;
     z-index:10;
+    div h2{
+        align-items: center;
+       justify-content: center;
+        background: #007185;
+    }
     div b{
         font-weight: 800;
     }
@@ -25,9 +31,9 @@ function Menu() {
     return (
            
             <Side>
-          <div>
               <h2>hello, sign in</h2>
               <hr />
+          <div>
               <b>
               Digital Content & Devices
               </b>

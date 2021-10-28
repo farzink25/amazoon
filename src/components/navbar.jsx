@@ -30,6 +30,7 @@ const Navbar = () => {
         right:3%;
         @media(max-width:768px){
             position: static;
+        overflow-x: scroll;
         }
     }
     &:hover{
@@ -40,9 +41,7 @@ const Navbar = () => {
 
     const Li=styled.li`
     display:flex;
-    justify-content: flex-end;
     align-items:center;
-
     `
 
 
@@ -62,15 +61,15 @@ const Navbar = () => {
               <Li>
               {show && <Menu/>}
               <BsJustify onClick={()=>setShow(!show)}
-               style={show?{
-                position:"relative",
-                transform:"translateX(28vw)",
+               style={show&&{
+                position:"fixed",
+                width:"2em",height:"2em",
+                transform:"translateX(30vw)",
+                color:"#f00",
                 background:"#000",
-                height:"4vh",
-                width:"100%",
-                marginBottom:"15vh",
+                top:"2vh"
             }
-                :null}
+               }
                  />
               </Li>
             </Sec>

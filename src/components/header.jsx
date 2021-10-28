@@ -10,48 +10,44 @@ import DropdownButton from 'react-bootstrap/DropdownButton'
 import {CardContext} from "./dataContext"
 import logo from "./images/logo.jpg"
 import usa from "./images/usa.png"
-import {Col , Row} from 'react-bootstrap'
+import {Col} from 'react-bootstrap'
 
 const Header = () => {
   
   const Head=styled.div`
   color:#fff;
   background-color: #131921;
-  max-height:10%;
   width:100%;
   padding:0 2%;
-  margin:0;
   font-size: .9em;
   display:flex;
   position: relative;
-  justify-content: space-around;
+  align-items:center;
   align-content: flex-end;
   flex-flow: row wrap;
-  z-index: 100;
-  font-size:14px;
+  font-size:.9em;
     @media(max-width:768px){
       flex-direction: column;
-      width:100%;
-      align-content:center ;
+      max-width:100%;
+      align-items:center ;
       height:100%;
-      padding:0 5% 0;
+      padding:0 5% ;
       border-bottom: 1px solid #fff;
     }
   `
 
   const Ul=styled.div`
-  padding:0% 3%;
-  display: inline;
   color:#000;
-  
   `
 
     const Logo=styled(Link)`
     width:10vw;
+    padding:1% 0;
     text-decoration: none;
     color:#fff;
     border:none;
-    img{
+    img
+    {
       height:8vh;
       width:100%;
     }
@@ -60,10 +56,10 @@ const Header = () => {
     const Sec=styled.div`
     position:relative;
     display:flex;
+    margin:0 1%;
     flex-flow:row wrap;
     align-content:center;
-    padding:9px;
-    width:auto;
+    justify-content:space-between;
     &:hover{
         border:1px solid #fff;
     }
@@ -102,9 +98,9 @@ color:#000;
 const Search=styled.div`
 display:flex;
 flex-direction:row;
-margin:0 1%;
+justify-content: center;
 width:100%;
-height:5vh;
+height:auto;
 text-decoration:none;
 `
 
@@ -123,7 +119,7 @@ const cart=useContext(CardContext)
             <Col>
             <Sec >
                <Logo  >
-               <img src={logo} alt="amazon" style={{objectFit:"cover",margin:"0 35%"}}/>
+               <img src={logo} alt="amazon" style={{objectFit:"cover",margin:"0 5%"}}/>
                </Logo>
               
           </Sec>

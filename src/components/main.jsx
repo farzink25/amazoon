@@ -32,7 +32,6 @@ button{
   background:orange;
 color:#222;
 width:10vw;
-height:5vh;
 padding:.5% 1%;
 border:none;
 @media(max-width:768px){

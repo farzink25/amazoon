@@ -5,7 +5,6 @@ import logo from "./images/logo.jpg"
 const Footer = () => {
     const Foot=styled.div`
     padding:3%;
-    height:60vh;
     width:100%;
     background:#232f3e;
     color:#fff;
@@ -14,12 +13,19 @@ const Footer = () => {
     }
     `
  const Ul=styled.ul`
- display: inline-flex;
- justify-content: center;
+ display: flex;
+ flex-flow:row wrap;
+ justify-content: space-evenly;
+ @media(max-width:768px){
+        flex-flow:column nowrap;
+        align-items: center;
+    }
  `
  const Li=styled.li`
 display:flex;
 flex-direction:column;
+margin-top:1%;
+align-items: center;
  `
  const Links=styled(Link)`
  text-decoration: none;
@@ -32,7 +38,8 @@ flex-direction:column;
 
 const Buttons=styled.div`
 display:flex;
-flex-direction:row;
+flex-flow:row nowrap;
+justify-content: center;
 margin:0 50vh;
 button{
     border-radius: 3px;
@@ -42,10 +49,9 @@ button{
     background:inherit;
 }
 img{
-    height:5vh;
+    max-height:5vh;
 }
 @media(max-width:768px){
- display: block;
  width:100%;
  padding:5% 0; 
 }
@@ -62,8 +68,7 @@ img{
                 <Links>Investor Relations</Links>
                 <Links>Amazon Devices</Links>
             </Li>
-            </Ul>
-            <Ul>
+           
             <Li>
             <h3>Make Money with Us</h3>
                 <Links>Sell products on Amazon</Links>
@@ -75,8 +80,7 @@ img{
                 <Links>Host an Amazon Hub</Links>
                 <Links>See More Make Money with Us</Links>
             </Li>
-            </Ul>
-            <Ul>
+           
             <Li>
             <h3>Amazon Payment Products</h3>
                 <Links>Amazon Business Card</Links>
@@ -84,8 +88,7 @@ img{
                 <Links>Reload Your Balance</Links>
                 <Links>Amazon Currency Converter</Links>
             </Li>
-            </Ul>
-            <Ul>
+          
             <Li>
             <h3>Let Us Help You</h3>
                 <Links>Amazon and COVID-19</Links>
@@ -98,7 +101,7 @@ img{
                 <Links>Help</Links>
             </Li> 
             </Ul><hr />
-            <Ul style={{display:"flex",alignItems:"center",justifyContent:"center"}} >
+            <Ul >
                 <Buttons >
                     <img src={logo} alt="amazon" />
                     <button type="submit">english</button>

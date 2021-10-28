@@ -25,15 +25,15 @@ img{
 }
 `
 
-const Ul=styled.div`
+const Ul=styled.ul`
 display:flex;
-flex-wrap:wrap;
-padding:0;
-justify-content:space-around;
+flex-flow:row wrap;
+padding:1%;
+justify-content:space-between;
 width:100%;
 height:50%;
 
-@media (max-width:500px){
+@media (max-width:768px){
     width:100%;
     float:none;
     display: flex;
@@ -42,21 +42,19 @@ height:50%;
 }
 `
 
-const Li=styled.div`
+const Li=styled.li`
 background:#fff;
 border-radius:3px;
 font-size:1em;
 border:0;
 display: flex;
-flex-wrap:wrap;
 padding:1%;
-flex-direction: column;
 justify-content:space-between;
-align-items:left;
-flex-flow:column nowrap;
+align-items:flex-start;
+flex-flow:column wrap;
 overflow:hidden;
 width:20%;
-height:50vh;
+height:auto;
 h2{
     font-size: 21px;
     font-weight:bold;
@@ -68,7 +66,7 @@ h2{
 img{
     width:100%;
         height:auto;
-        min-height:60%;
+        min-height:30%;
 object-fit:cover;
 @media (max-width:768px){
     height:80%;
@@ -97,7 +95,6 @@ const Sign=styled.button`
 background:orange;
 color:#222;
 width:10vw;
-height:5vh;
 padding:.5% 1%;
 border:none;
 margin-bottom: 2%;
